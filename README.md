@@ -1,4 +1,8 @@
 # consulta_taller2_arquitectura
+
+[![CI/CD PipeLine](https://github.com/juangomez88/consulta_taller2_arquitectura/actions/workflows/build.yml/badge.svg)](https://github.com/juangomez88/consulta_taller2_arquitectura/actions/workflows/build.yml)
+
+
 Implementation of a Simple App with the next operations:
 * Get random nations
 * Get random currencies
