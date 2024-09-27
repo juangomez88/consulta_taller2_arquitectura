@@ -16,7 +16,13 @@
 
     <properties>
         <java.version>11</java.version>
+        <sonar.projectKey>juangomez88_consulta_taller2_arquitectura</sonar.projectKey>
+        <sonar.organization>juangomez88</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
+
+
+
     <dependencies>
 
         <dependency>
