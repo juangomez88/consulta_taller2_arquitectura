@@ -110,9 +110,9 @@ jobs:
         - name: Build & push Docker image
           uses: mr-smithers-excellent/docker-build-push@v6
           with:
-                image: juangomez112/consulta_taller2_arquitectura
-                tags: latest one
-                registry: docker.io
-                dockerfile: Dockerfile
-                username: ${{ secrets.DOCKER_USERNAME }}
-                password: ${{ secrets.DOCKER_PASSWORD }}
+              image: juangomez112/consulta_taller2_arquitectura
+              tags: latest
+              registry: docker.io
+              dockerfile: Dockerfile
+              username: ${{ secrets.DOCKER_USERNAME }}
+              password: ${{ secrets.DOCKER_PASSWORD }}
