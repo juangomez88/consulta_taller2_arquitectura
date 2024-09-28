@@ -70,24 +70,12 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       - name: Build with Maven
-        run: mvn -B package -DskipTests --file pom.xml
+        run: mvn -B package -DskipTests --file pom.xml  # Asegúrate de que el JAR se genere en 'target/'
       - name: Upload JAR
         uses: actions/upload-artifact@v3
         with:
           name: artifact
-          path: target/consulta_taller2_arquitectura-0.0.1-SNAPSHOT.jar
-
-  docker:
-    needs: build
-    name: Build & Push Docker Image
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: Download JAR
-        uses: actions/download-artifact@v3
-        with:
-          name: artifact
-          path: ./target
+          path: target/consulta_taller2_arquitectura-0.0.1-SNAPSHOT.jar  # Confirma que este es el nombre correcto del archivo
       - name: Build & push Docker image
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
