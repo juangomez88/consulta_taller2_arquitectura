@@ -109,7 +109,7 @@ jobs:
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
           image: juangomez112/consultaarquitectura
-          
+
           registry: docker.io
           dockerfile: Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
